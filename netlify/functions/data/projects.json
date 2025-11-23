@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Task Manager App",
+    "author": "Awsaf Ibrahim",
+    "languages": ["React", "Spring Boot", "PostgreSQL", "Docker"],
+    "description": "A full-stack productivity app deployed on Azure.",
+    "link": "https://github.com/awsafIbrahim/Full_Stack_TaskManager"
+  },
+  {
+    "name": "Unix Shell Simulator",
+    "author": "Awsaf Ibrahim",
+    "languages": ["C", "Unix System Calls"],
+    "description": "A custom Unix shell supporting command execution and process management.",
+    "link": "https://github.com/awsafIbrahim/MyShell"
+  },
+  {
+    "name": "CPU Scheduler Simulator",
+    "author": "Awsaf Ibrahim",
+    "languages": ["C"],
+    "description": "A C-based scheduler implementing RR, Priority Scheduling, and SJF.",
+    "link": "https://github.com/awsafIbrahim/cpu_scheduler-"
+  }
+]
