@@ -2,9 +2,17 @@ const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fet
 
 exports.handler = async () => {
   try {
-    const apiKey = process.env.KEY;
-    const city = "Dartmouth";
+    const apiKey = process.env.WEATHER_API_KEY;
 
+    if (!apiKey) {
+      console.error("NO WEATHER_API_KEY");
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Missing API key" })
+      };
+    }
+
+    const city = "Dartmouth";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     const res = await fetch(url);
@@ -20,10 +28,12 @@ exports.handler = async () => {
       })
     };
 
-  } catch (err) {
+  } 
+  catch (err) {
+    console.error("Serverless function error:", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "ERROOOOOR" })
+      body: JSON.stringify({ error: "Failed to fetch weather" })
     };
   }
 };

@@ -30,7 +30,7 @@ export default function WeatherWidget() {
   }, []);
 
   if (loading){
-    return <p>Loading weather…</p>;
+    return <p>Loading weather</p>;
   } 
   if (error) {
     return <p className="text">{error}</p>;
