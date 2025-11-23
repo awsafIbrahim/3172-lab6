@@ -27,11 +27,12 @@ exports.handler = async () => {
       })
     };
 
-  } catch (err) {
+  } 
+  catch (err) {
     console.error("Serverless function error:", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch weather" })
+      body: JSON.stringify({ error: "Failed to fetch weather DATA" })
     };
   }
 };

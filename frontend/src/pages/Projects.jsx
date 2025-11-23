@@ -11,9 +11,9 @@ useEffect(() => {
       const isLocal = window.location.hostname === "localhost";
 
       const url = isLocal
-        //It was just for local testing purpose 
+        //For TEsting locally
         ? "/projects.json" 
-        // This is the right URL
+        // Online URL
         : "/.netlify/functions/projects"; 
 
       const res = await fetch(url);
@@ -53,9 +53,7 @@ useEffect(() => {
               <div className="card-body">
                 <h5 className="card-title">{project.name}</h5>
                 <h6 className="text-muted">{project.author}</h6>
-
                 
-
                 <p className="card-text">{project.description}</p>
               </div>
             </div>
