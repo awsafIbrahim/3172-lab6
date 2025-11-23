@@ -1,4 +1,5 @@
 import WeatherWidget from "../components/WeatherWidget";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       </p>
 
       <div className="mt-5">
-        <a href="/projects" className="btn btn-primary btn-lg px-3"> My Projects</a>
+        <Link to="/projects" className="btn btn-primary btn-lg px-3">
+        My Projects
+        </Link>
       </div>
     </section>
   );
